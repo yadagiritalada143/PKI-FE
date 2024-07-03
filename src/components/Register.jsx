@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Img from "../assets/Mobile.png";
+import Img from "../assets/register.png";
 import { Form, InputGroup } from "react-bootstrap";
 import { registerUser } from "./utils/axiosInstance";
 import { toast } from "react-toastify";

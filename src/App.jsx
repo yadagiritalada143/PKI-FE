@@ -8,6 +8,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GeneratePki from './components/GeneratePki'
+import AllPkis from './components/AllPkis'
+import Profile from './components/Profile'
 
 const routes = createBrowserRouter([
   {
@@ -24,7 +27,21 @@ const routes = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Dashboard />
+    element: <Dashboard />,
+    children:[
+      {
+        path: "/home/",
+        element: <GeneratePki/>
+      },
+      {
+        path: "/home/list",
+        element: <AllPkis/>
+      },
+      {
+        path: "/home/profile",
+        element: <Profile />
+      }
+    ]
   }
 ]);
 const App = () => {

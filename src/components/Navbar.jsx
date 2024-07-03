@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return <>
         <div className="d-flex justify-content-between navbar">
-            <h3>Vulnerability Scanner</h3>
+            <h3>PKI Generator</h3>
             <button type="button" className="btn btn-danger" onClick={logout}> Logout <FaSignOutAlt /></button>
         </div>
     </>

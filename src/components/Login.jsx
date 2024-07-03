@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import Img from '../assets/secure.png'
+import Img from '../assets/login1.jpg'
 import { Form } from 'react-bootstrap'
 import { loginUser } from './utils/axiosInstance'
 import { toast } from 'react-toastify'
 import { useNavigate } from "react-router-dom";
+import Dashboard from './Dashboard'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,6 +35,9 @@ const Login = () => {
   return (
     <div className="parent">
     <div className='container1'>
+      <div className="imglogin">
+        <img src={Img} alt="" />
+      </div>
       
       <div className="formContainer">
         <h1 className="px-5 mt-2 text-success">Login</h1>
@@ -46,9 +50,6 @@ const Login = () => {
             <p className='mx-2 my-2 text-center'>Don't have an account? <a href='/register'>Register</a></p>
         </Form>
 
-      </div>
-      <div className="imglogin">
-        <img src={Img} alt="" />
       </div>
 
 
