@@ -8,6 +8,7 @@ export const loginUser = async (req) => {
 }
 
 export const registerUser = async (req) => {
+    // if(!req.body.userRole){req.body.userRole = "USER"}
     return axios.post(`${base_url}/common/register`, req).then((res) => res);
 }
 

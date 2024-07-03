@@ -6,7 +6,7 @@ const GeneratePki = () => {
     // const [allpki,setAllpki] = useState([]);
     // const [secret,setSecret] = useState("");
 
-    let allpki = [];
+    let allpki = [1];
 
     
     
@@ -17,7 +17,7 @@ const GeneratePki = () => {
         <input  type="text" name="secret" id="secret" placeholder="secret"  />
       </div>
       <div className=" w-100 text-end">
-        <Button className=" btn-success my-3 mx-5 outline-none" >Generate</Button>
+        <Button className=" btn-success my-3 mx-3 outline-none" >Generate</Button>
       </div>
       {allpki.length > 0 && <div className="keyscontainer text-center ">
         <h3 className=" mx-5">Below Are your Public and Private Keys</h3>
@@ -28,8 +28,8 @@ const GeneratePki = () => {
 
         <div className="save d-flex justify-content-around align-items-center my-2">
           <span>Do you want to save your Keys for future reference ?</span>
-          <Button className="btn-success ">Yes</Button>
-          <Button className="btn-danger">No</Button>
+          <Button className="btn-success saveBtn">Yes</Button>
+          <Button className="btn-danger saveBtn">No</Button>
         </div>
       </div>}
     </>

@@ -130,17 +130,17 @@ input[type="number"] {
 
 .dashMenu{
   width: 50%;
+  min-width: 400px;
   height: 10vh;
 }
-
-
 .content{
   height: max-content;
   width: 60%;
+  min-width: 650px;
   padding: 2em;
 }
 .secret input[type ="text"]{
-  width: 60%;
+  width: 78%;
   padding: 5px;
   outline: none;
 }
@@ -156,6 +156,10 @@ input[type="number"] {
 .keys .public,.private{
   width: 40%;
   height: 200px;
+}
+
+.saveBtn{
+  width: 14%;
 }
 
 @media screen and (max-width: 630px) {
