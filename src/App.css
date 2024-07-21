@@ -11,56 +11,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #85ffbd;
-  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); */
-  /* background: url('./assets/wave.svg') no-repeat bottom; */
-}
-
-.container1 {
-  width: 80%;
-  min-width: 80%;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  /* background-color: white; */
-  border-radius: 1em;
+  background: url("./assets/back2.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: black; */
 }
 
 .formContainer {
-  width: 450px;
+  width: 480px;
+  /* height: 60vh; */
   min-width: 310px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 0.5em;
-  border: solid rgb(169, 163, 163);
+  border-radius: 1em;
+  /* border: solid rgba(181, 179, 179, 0.847); */
+  padding: 1rem;
+  background: #ffffff96;
+  /* background: transparent; */
 }
 
 .formContainer form {
   width: 80%;
-  height: 60%;
   align-self: center;
-  margin-top: 0.8em;
+  /* margin-top: 1em; */
+  /* border: solid red; */
 }
-.formContainer form input {
+/* .formContainer form input {
   border: 1px solid green;
-}
+} */
 .formContainer form input:focus {
   box-shadow: none;
-  border: 1px solid green;
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  border: 1px solid grey;
+  /* border: 1px solid green;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); */
+}
+
+.lock {
+  font-size: 25px;
+}
+.mail {
+  /* border: solid red; */
+  font-size: 26px;
 }
 
 #check:checked {
-  background-color: green;
+  background-color: black;
 }
 
 .formContainer a {
   text-decoration: none;
-  color: green;
+  color: rgb(106, 95, 95);
 }
 
 .imgregister {
@@ -128,61 +130,67 @@ input[type="number"] {
   margin-top: 10px;
 }
 
-.dashMenu{
+.dashMenu {
   width: 50%;
   min-width: 400px;
   height: 10vh;
 }
-.content{
+.content {
   height: max-content;
   width: 60%;
   min-width: 650px;
   padding: 2em;
 }
-.secret input[type ="text"]{
+.secret input[type="text"] {
   width: 78%;
   padding: 5px;
   outline: none;
 }
-.keyscontainer{
-  width: 100%;
-  padding: 1em;
-}
-.keyscontainer .keys{
+.keys-container .keys {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
-.keys .public,.private{
-  width: 40%;
+
+.keys-container .keys .public,
+.keys-container .keys .private {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  width: 45%;
+  text-align: left;
   height: 200px;
+  word-break: break-word;
 }
 
-.saveBtn{
-  width: 14%;
+.keys-container .keys .public:hover,
+.keys-container .keys .private:hover {
+  cursor: pointer;
+}
+
+.secret {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.saveBtn {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 630px) {
-  .container1 {
-    width: 100%;
-    height: 100vh;
-    /* border: solid red; */
-    flex-direction: column;
-    gap: 20px;
-    background-color: #85ffbd;
-    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
-  }
   .formContainer {
     height: 50%;
     width: 70%;
-    background-color: #fff;
+    /* background-color: #fff; */
   }
   .register {
     height: fit-content;
   }
   .register form {
     height: 90%;
-    
   }
   .imgregister {
     display: none;
